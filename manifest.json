@@ -1,0 +1,30 @@
+{
+  "name": "munios",
+  "description": "munios",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "permissions": [
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/nagios/cgi-bin//status.cgi*"
+      ],
+      "js": [
+        "/js/jquery-2.1.1.min.js",
+        "/js/nagios.js"
+      ],
+      "all_frames": true
+    },
+    {
+      "matches": [
+        "http://*/munin/"
+      ],
+      "js": [
+        "/js/jquery-2.1.1.min.js",
+        "/js/munin.js"
+      ]
+    }
+  ]
+}
